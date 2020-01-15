@@ -3,15 +3,18 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "sketch-export-presets.my-command-identifier",
-      "script": "./my-command.js"
+      "name": "⬆️ Save Export Preferences",
+      "identifier": "save-export-prefs",
+      "script": "./export.js"
     }
   ],
   "menu": {
-    "title": "sketch-export-presets",
+    "title": "Sketch Export Presets",
     "items": [
-      "sketch-export-presets.my-command-identifier"
+      "save-export-prefs",
+      "import-export-prefs",
+      "-",
+      "reset-export-prefs"
     ]
   }
 }

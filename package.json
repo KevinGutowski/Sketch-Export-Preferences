@@ -26,6 +26,7 @@
   "author": "Kevin Gutowski <kgutowski@berkeley.edu>",
   "dependencies": {
     "@skpm/dialog": "^0.4.0",
-    "@skpm/fs": "^0.2.5"
+    "@skpm/fs": "^0.2.5",
+    "@skpm/sketchapp-json-plugin": "^0.2.0"
   }
 }
