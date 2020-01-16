@@ -5,26 +5,52 @@ import { writeFileSync } from '@skpm/fs';
 import { toSJSON } from '@skpm/sketchapp-json-plugin'
 
 export default function() {
-    // let exportPresets = MSPersistentAssetCollection.sharedGlobalAssets().exportPresets()
+    let exportPresets = MSPersistentAssetCollection.sharedGlobalAssets().exportPresets()
+    let document = sketch.getSelectedDocument()
+    if (exportPresets.length === 0) {
+        UI.message('No export preferences.')
+        return
+    }
 
-    // if (exportPresets.length === 0) {
-    //     UI.message('No export preferences.')
-    // }
+    let data = { "presets": [], "author": String(NSFullUserName())}
+    exportPresets.forEach(preset => {
+        console.log(preset)
+        let p = {}
+        p.class = String(preset.class())
+        p.name = String(preset.name())
+        p.shouldApplyAutomatically= preset.shouldApplyAutomatically()
+        p.exportFormats = []
+        preset.exportFormats().forEach(exportFormat => {
+            let f = {}
+            f.class = String(exportFormat.class())
+            f.absoluteSize = exportFormat.absoluteSize()
+            f.fileFormat = String(exportFormat.fileFormat())
+            f.name = String(exportFormat.name())
+            f.namingScheme = exportFormat.namingScheme()
+            f.scale = exportFormat.scale()
+            f.visibleScaleType = exportFormat.visibleScaleType()
+            p.exportFormats.push(f)
+        })
+        data.presets.push(p)
+    })
 
-    // let data = []
-    // exportPresets.forEach(preset => {
-    //     data.push(toSJSON(preset))
-    // })
-    let data = "Hello there"
+    console.log("before stringify", data)
+    dialog.showSaveDialog(document,{
+            filters: [{ name: 'JSON', extensions: [ 'json' ] }]
+        }).then(
+        result => {
+            let filepath = result.filePath
+            try {
 
-    dialog.showSaveDialog(
-        {
-            filters: [{ name: 'Text File', extensions: [ 'txt', 'text' ] }]
-        },
-        (filePath) => {
-            console.log('hiya!')
-            writeFileSync(filePath, data);
-            UI.message('Text saved to... "' + filePath + '".');
+                console.log("after stringify", JSON.stringify(data))
+                writeFileSync(filepath, JSON.stringify(data))
+                //data.writeToFile_atomically(filepath,true)
+            } catch(e) {
+                console.log("writefilesync didn't work")
+                console.log(e)
+            }
+        }, error => {
+            console.log(error)
         }
-    );
+    )
 }
