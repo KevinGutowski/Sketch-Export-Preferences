@@ -13,8 +13,10 @@ Share your Sketch export preferences with your coworkers or colleagues.
 #### Export
 
 Save your preferences to a json file.
-// Image here
+![Export process](readme_images/export.gif)
 
 #### Import
 
 Select a json file exported using this plugin and boom! You have now added new export preferences.
+
+![Import process](readme_images/import.gif)
