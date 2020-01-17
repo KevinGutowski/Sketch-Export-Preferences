@@ -4,9 +4,9 @@ Share your Sketch export preferences with your coworkers or colleagues.
 
 ## Installation
 
-- [Download](../../releases/latest/download/sketch-export-presets.sketchplugin.zip) the latest release of the plugin
+- [Download](../../releases/latest/download/sketch-export-preferences.sketchplugin.zip) the latest release of the plugin
 - Un-zip
-- Double-click on sketch-export-presets.sketchplugin
+- Double-click on sketch-export-preferences.sketchplugin
 
 ## How it works
 
