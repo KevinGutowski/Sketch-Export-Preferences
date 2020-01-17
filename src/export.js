@@ -13,7 +13,6 @@ export default function() {
 
     let data = { "presets": [], "author": String(NSFullUserName())}
     exportPresets.forEach(preset => {
-        console.log(preset)
         let p = {}
         p.class = String(preset.class())
         p.name = String(preset.name())
@@ -33,23 +32,21 @@ export default function() {
         data.presets.push(p)
     })
 
-    console.log("before stringify", data)
     dialog.showSaveDialog(document,{
             filters: [{ name: 'JSON', extensions: [ 'json' ] }]
         }).then(
         result => {
             let filepath = result.filePath
             try {
-
-                console.log("after stringify", JSON.stringify(data))
                 writeFileSync(filepath, JSON.stringify(data))
-                //data.writeToFile_atomically(filepath,true)
+                UI.message(`✅ Export preferences saved to ${filepath}`)
             } catch(e) {
+                UI.message("⚠️ Export preferences failed to be saved. Please try again.")
                 console.log("writefilesync didn't work")
-                console.log(e)
+                console.error(e)
             }
         }, error => {
-            console.log(error)
+            // Most likely the user canceled the save
         }
     )
 }
