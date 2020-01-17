@@ -2,7 +2,6 @@ import { UI } from 'sketch';
 import sketch from 'sketch/dom';
 import dialog from '@skpm/dialog';
 import { writeFileSync } from '@skpm/fs';
-import { toSJSON } from '@skpm/sketchapp-json-plugin'
 
 export default function() {
     let exportPresets = MSPersistentAssetCollection.sharedGlobalAssets().exportPresets()
