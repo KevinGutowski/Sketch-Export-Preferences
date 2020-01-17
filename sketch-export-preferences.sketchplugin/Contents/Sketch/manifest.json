@@ -22,7 +22,7 @@
       "reset-export-prefs"
     ]
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Import and Save Sketch Export Preferences",
   "name": "sketch-export-preferences",
   "identifier": "sketch-export-preferences",
