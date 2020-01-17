@@ -1,7 +1,7 @@
 {
   "name": "sketch-export-preferences",
   "description": "Import and Save Sketch Export Preferences",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "sketch": ">=49.0"
   },
