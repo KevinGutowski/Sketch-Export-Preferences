@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "↗️ Export Preferences",
+      "identifier": "save-export-prefs",
+      "script": "__export.js"
+    },
+    {
+      "name": "⬇️ Load Preferences",
+      "identifier": "import-export-prefs",
+      "script": "__import.js"
+    }
+  ],
+  "menu": {
+    "title": "Sketch Export Presets",
+    "items": [
+      "save-export-prefs",
+      "import-export-prefs",
+      "-",
+      "reset-export-prefs"
+    ]
+  },
+  "version": "1.0.0",
+  "description": "Import and Save Sketch Export Preferences",
+  "name": "sketch-export-preferences",
+  "identifier": "sketch-export-preferences",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/KevinGutowski/Sketch-Export-Preferences/master/.appcast.xml",
+  "author": "Kevin Gutowski"
+}

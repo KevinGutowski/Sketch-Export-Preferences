@@ -1,14 +1,14 @@
 {
-  "name": "sketch-export-presets",
+  "name": "sketch-export-preferences",
   "description": "Import and Save Sketch Export Preferences",
   "version": "1.0.0",
   "engines": {
     "sketch": ">=49.0"
   },
   "skpm": {
-    "name": "sketch-export-presets",
+    "name": "sketch-export-preferences",
     "manifest": "src/manifest.json",
-    "main": "sketch-export-presets.sketchplugin",
+    "main": "sketch-export-preferences.sketchplugin",
     "assets": [
       "assets/**/*"
     ],
@@ -26,7 +26,7 @@
   "author": "Kevin Gutowski",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KevinGutowski/Sketch-Export-Presets"
+    "url": "https://github.com/KevinGutowski/Sketch-Export-Preferences"
   },
   "dependencies": {
     "@skpm/dialog": "^0.4.0",
