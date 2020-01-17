@@ -14,7 +14,7 @@
     }
   ],
   "menu": {
-    "title": "Sketch Export Presets",
+    "title": "Sketch Export Prefs",
     "items": [
       "save-export-prefs",
       "import-export-prefs",
