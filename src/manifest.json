@@ -3,9 +3,13 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "⬆️ Save Export Preferences",
+      "name": "↗️ Export Preferences",
       "identifier": "save-export-prefs",
       "script": "./export.js"
+    }, {
+      "name": "⬇️ Load Preferences",
+      "identifier": "import-export-prefs",
+      "script": "./import.js"
     }
   ],
   "menu": {
