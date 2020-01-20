@@ -20,3 +20,13 @@ Save your preferences to a json file.
 Select a json file exported using this plugin and boom! You have now added new export preferences.
 
 ![Import process](readme_images/import.gif)
+
+### More plugins!
+Check out my other helpful plugins for Sketch
+
+- [🐈 Truncat...](https://github.com/KevinGutowski/Truncat)
+  - Easily add text truncation to text objects and symbols
+- [🌈 Key Color](https://github.com/KevinGutowski/keyColor)
+  - Commonly used colors a keyboard shortcut away
+- [📌 BetterTypePanel](https://github.com/KevinGutowski/betterTypePanel)
+  - A quick-access window to control OpenType properties
