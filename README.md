@@ -1,4 +1,4 @@
-# Sketch Export Prefrences
+# Sketch Export Preferences
 
 Share your Sketch export preferences with your coworkers or colleagues.
 
